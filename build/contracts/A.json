@@ -1,0 +1,391 @@
+{
+  "contractName": "A",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "a",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"a\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Edgar Herrador - <edgar.herrador@slock.it>\",\"methods\":{\"a()\":{\"details\":\"When function a() of contract A is called, the contract will made a call (DELEGATECALL) to the function a() of the library and the calling context is passed to the library.\",\"return\":\"The address of this funtion is returned and not the library's.\"}},\"title\":\"A - Implementing the contract for an example  for a Library Driven Development approach.\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/edgarherrador/Documents/Projects/custody/brot/contracts/A.sol\":\"A\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/edgarherrador/Documents/Projects/custody/brot/contracts/A.sol\":{\"keccak256\":\"0xefd07c33468f575827358390420e3c4f6477b4daf20ef7e268f3c2edd01998c6\",\"urls\":[\"bzzr://67ded095c3462b11de522a325395044de83683942dd4d5eccb645695baa70efa\"]},\"/Users/edgarherrador/Documents/Projects/custody/brot/contracts/C.sol\":{\"keccak256\":\"0x9311cf9bb14882dc256f3f648027e2f3c6c40283175df3a8afb997f001782e67\",\"urls\":[\"bzzr://c10b5b1822d722ba1bbcaaa84d492c366f9e2db48062a85b126830c95413acd1\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610124806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80630dbe671f14602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600073__C_____________________________________630dbe671f6040518163ffffffff1660e01b815260040160206040518083038186803b15801560ba57600080fd5b505af415801560cd573d6000803e3d6000fd5b505050506040513d602081101560e257600080fd5b810190808051906020019092919050505090509056fea165627a7a72305820647d0a82b40d2c3a36a2e664a0436034b781bbe258220097196ec255d9bf1f3c0029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80630dbe671f14602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600073__C_____________________________________630dbe671f6040518163ffffffff1660e01b815260040160206040518083038186803b15801560ba57600080fd5b505af415801560cd573d6000803e3d6000fd5b505050506040513d602081101560e257600080fd5b810190808051906020019092919050505090509056fea165627a7a72305820647d0a82b40d2c3a36a2e664a0436034b781bbe258220097196ec255d9bf1f3c0029",
+  "sourceMap": "208:397:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;208:397:1;;;;;;;",
+  "deployedSourceMap": "208:397:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;208:397:1;;;;;;;;;;;;;;;;;;;531:72;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;565:7;591:1;:3;:5;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;591:5:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;591:5:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;591:5:1;;;;;;;;;;;;;;;;584:12;;531:72;:::o",
+  "source": "pragma solidity >=0.4.25 <0.6.0;\n\nimport \"./C.sol\";\n\n/// @title A - Implementing the contract for an example  for a Library Driven Development approach.\n/// @author Edgar Herrador - <edgar.herrador@slock.it>\ncontract A {\n\n    /*\n     * Public functions\n     */\n\n    /// @dev When function a() of contract A is called, the contract will made a call (DELEGATECALL) to the function a() of the library and the calling context is passed to the library.\n    /// @return The address of this funtion is returned and not the library's.\n    function a() public view returns (address) {\n        return C.a();\n    }\n}",
+  "sourcePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/A.sol",
+  "ast": {
+    "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/A.sol",
+    "exportedSymbols": {
+      "A": [
+        70
+      ]
+    },
+    "id": 71,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/C.sol",
+        "file": "./C.sol",
+        "id": 59,
+        "nodeType": "ImportDirective",
+        "scope": 71,
+        "sourceUnit": 103,
+        "src": "34:17:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title A - Implementing the contract for an example  for a Library Driven Development approach.\n @author Edgar Herrador - <edgar.herrador@slock.it>",
+        "fullyImplemented": true,
+        "id": 70,
+        "linearizedBaseContracts": [
+          70
+        ],
+        "name": "A",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 68,
+              "nodeType": "Block",
+              "src": "574:29:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 64,
+                        "name": "C",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 102,
+                        "src": "591:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_C_$102_$",
+                          "typeString": "type(library C)"
+                        }
+                      },
+                      "id": 65,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "a",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 101,
+                      "src": "591:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_view$__$returns$_t_address_$",
+                        "typeString": "function () view returns (address)"
+                      }
+                    },
+                    "id": 66,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "591:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 63,
+                  "id": 67,
+                  "nodeType": "Return",
+                  "src": "584:12:1"
+                }
+              ]
+            },
+            "documentation": "@dev When function a() of contract A is called, the contract will made a call (DELEGATECALL) to the function a() of the library and the calling context is passed to the library.\n @return The address of this funtion is returned and not the library's.",
+            "id": 69,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "a",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "541:2:1"
+            },
+            "returnParameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 69,
+                  "src": "565:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "565:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "564:9:1"
+            },
+            "scope": 70,
+            "src": "531:72:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 71,
+        "src": "208:397:1"
+      }
+    ],
+    "src": "0:605:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/A.sol",
+    "exportedSymbols": {
+      "A": [
+        70
+      ]
+    },
+    "id": 71,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/C.sol",
+        "file": "./C.sol",
+        "id": 59,
+        "nodeType": "ImportDirective",
+        "scope": 71,
+        "sourceUnit": 103,
+        "src": "34:17:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title A - Implementing the contract for an example  for a Library Driven Development approach.\n @author Edgar Herrador - <edgar.herrador@slock.it>",
+        "fullyImplemented": true,
+        "id": 70,
+        "linearizedBaseContracts": [
+          70
+        ],
+        "name": "A",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 68,
+              "nodeType": "Block",
+              "src": "574:29:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 64,
+                        "name": "C",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 102,
+                        "src": "591:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_C_$102_$",
+                          "typeString": "type(library C)"
+                        }
+                      },
+                      "id": 65,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "a",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 101,
+                      "src": "591:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_view$__$returns$_t_address_$",
+                        "typeString": "function () view returns (address)"
+                      }
+                    },
+                    "id": 66,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "591:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 63,
+                  "id": 67,
+                  "nodeType": "Return",
+                  "src": "584:12:1"
+                }
+              ]
+            },
+            "documentation": "@dev When function a() of contract A is called, the contract will made a call (DELEGATECALL) to the function a() of the library and the calling context is passed to the library.\n @return The address of this funtion is returned and not the library's.",
+            "id": 69,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "a",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "541:2:1"
+            },
+            "returnParameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 69,
+                  "src": "565:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "565:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "564:9:1"
+            },
+            "scope": 70,
+            "src": "531:72:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 71,
+        "src": "208:397:1"
+      }
+    ],
+    "src": "0:605:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {
+        "C": "0xc973E931dcbc0E3fdfd061D3a6779B55564a3E57"
+      },
+      "address": "0x78D9620B22A16C1a074dE399874193d383beC89F",
+      "transactionHash": "0x34a5cc02566df8d760f81fe7aa7ec6504f41929f8916c29959e527ca1a78706a"
+    }
+  },
+  "schemaVersion": "3.0.13",
+  "updatedAt": "2019-10-01T12:44:03.684Z",
+  "devdoc": {
+    "author": "Edgar Herrador - <edgar.herrador@slock.it>",
+    "methods": {
+      "a()": {
+        "details": "When function a() of contract A is called, the contract will made a call (DELEGATECALL) to the function a() of the library and the calling context is passed to the library.",
+        "return": "The address of this funtion is returned and not the library's."
+      }
+    },
+    "title": "A - Implementing the contract for an example  for a Library Driven Development approach."
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

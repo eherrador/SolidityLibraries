@@ -1,0 +1,496 @@
+{
+  "contractName": "B",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "increment",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"increment\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/edgarherrador/Documents/Projects/custody/brot/contracts/B.sol\":\"B\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/edgarherrador/Documents/Projects/custody/brot/contracts/B.sol\":{\"keccak256\":\"0xbbf9fc5863772de76b4bd80625aae3cb30709158712fad4108bac473ce6ed127\",\"urls\":[\"bzzr://3f4c1eb6ebe8b63f99fce7c699a164feef3d03f481d33dad02e09f580db8f844\"]},\"/Users/edgarherrador/Documents/Projects/custody/brot/contracts/D.sol\":{\"keccak256\":\"0x275b092f2096c0ffe0c9978fcb8d7d57004ce206571a7ada9285847bc7d20cb4\",\"urls\":[\"bzzr://8b5428b9205c75a6dba2473ba9382b75ab1a4679d81392492f87a255cdec8ce9\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610105806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063d09de08a14602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b60008073__D_____________________________________63e644158c90916040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015609b57600080fd5b505af415801560ae573d6000803e3d6000fd5b505050506040513d602081101560c357600080fd5b810190808051906020019092919050505090509056fea165627a7a72305820bbbc64116315c4a35e2160238c89d390d18e784d0c2617d1ef0dd955ee61a3140029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063d09de08a14602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b60008073__D_____________________________________63e644158c90916040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015609b57600080fd5b505af415801560ae573d6000803e3d6000fd5b505050506040513d602081101560c357600080fd5b810190808051906020019092919050505090509056fea165627a7a72305820bbbc64116315c4a35e2160238c89d390d18e784d0c2617d1ef0dd955ee61a3140029",
+  "sourceMap": "53:159:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:159:2;;;;;;;",
+  "deployedSourceMap": "53:159:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;53:159:2;;;;;;;;;;;;;;;;;;;122:88;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;159:4;182:7;:19;;;;:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;182:21:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;182:21:2;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;182:21:2;;;;;;;;;;;;;;;;175:28;;122:88;:::o",
+  "source": "pragma solidity >=0.4.25 <0.6.0;\n\nimport \"./D.sol\";\n\ncontract B {\n    using D for D.Counter;\n\n    D.Counter counter;\n\n    function increment() public returns (uint) {\n        return counter.incremented();\n    }\n}",
+  "sourcePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/B.sol",
+  "ast": {
+    "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/B.sol",
+    "exportedSymbols": {
+      "B": [
+        89
+      ]
+    },
+    "id": 90,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 72,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/D.sol",
+        "file": "./D.sol",
+        "id": 73,
+        "nodeType": "ImportDirective",
+        "scope": 90,
+        "sourceUnit": 121,
+        "src": "34:17:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 89,
+        "linearizedBaseContracts": [
+          89
+        ],
+        "name": "B",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 76,
+            "libraryName": {
+              "contractScope": null,
+              "id": 74,
+              "name": "D",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 120,
+              "src": "76:1:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_D_$120",
+                "typeString": "library D"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "70:22:2",
+            "typeName": {
+              "contractScope": null,
+              "id": 75,
+              "name": "D.Counter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 107,
+              "src": "82:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$107_storage_ptr",
+                "typeString": "struct D.Counter"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 78,
+            "name": "counter",
+            "nodeType": "VariableDeclaration",
+            "scope": 89,
+            "src": "98:17:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Counter_$107_storage",
+              "typeString": "struct D.Counter"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 77,
+              "name": "D.Counter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 107,
+              "src": "98:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$107_storage_ptr",
+                "typeString": "struct D.Counter"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 87,
+              "nodeType": "Block",
+              "src": "165:45:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 83,
+                        "name": "counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 78,
+                        "src": "182:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$107_storage",
+                          "typeString": "struct D.Counter storage ref"
+                        }
+                      },
+                      "id": 84,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "incremented",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 119,
+                      "src": "182:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_Counter_$107_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$107_storage_ptr_$",
+                        "typeString": "function (struct D.Counter storage pointer) returns (uint256)"
+                      }
+                    },
+                    "id": 85,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "182:21:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 82,
+                  "id": 86,
+                  "nodeType": "Return",
+                  "src": "175:28:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 88,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increment",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "140:2:2"
+            },
+            "returnParameters": {
+              "id": 82,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 81,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 88,
+                  "src": "159:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 80,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "159:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "158:6:2"
+            },
+            "scope": 89,
+            "src": "122:88:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 90,
+        "src": "53:159:2"
+      }
+    ],
+    "src": "0:212:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/B.sol",
+    "exportedSymbols": {
+      "B": [
+        89
+      ]
+    },
+    "id": 90,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 72,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/D.sol",
+        "file": "./D.sol",
+        "id": 73,
+        "nodeType": "ImportDirective",
+        "scope": 90,
+        "sourceUnit": 121,
+        "src": "34:17:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 89,
+        "linearizedBaseContracts": [
+          89
+        ],
+        "name": "B",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 76,
+            "libraryName": {
+              "contractScope": null,
+              "id": 74,
+              "name": "D",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 120,
+              "src": "76:1:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_D_$120",
+                "typeString": "library D"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "70:22:2",
+            "typeName": {
+              "contractScope": null,
+              "id": 75,
+              "name": "D.Counter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 107,
+              "src": "82:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$107_storage_ptr",
+                "typeString": "struct D.Counter"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 78,
+            "name": "counter",
+            "nodeType": "VariableDeclaration",
+            "scope": 89,
+            "src": "98:17:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Counter_$107_storage",
+              "typeString": "struct D.Counter"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 77,
+              "name": "D.Counter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 107,
+              "src": "98:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$107_storage_ptr",
+                "typeString": "struct D.Counter"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 87,
+              "nodeType": "Block",
+              "src": "165:45:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 83,
+                        "name": "counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 78,
+                        "src": "182:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$107_storage",
+                          "typeString": "struct D.Counter storage ref"
+                        }
+                      },
+                      "id": 84,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "incremented",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 119,
+                      "src": "182:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_delegatecall_nonpayable$_t_struct$_Counter_$107_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$107_storage_ptr_$",
+                        "typeString": "function (struct D.Counter storage pointer) returns (uint256)"
+                      }
+                    },
+                    "id": 85,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "182:21:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 82,
+                  "id": 86,
+                  "nodeType": "Return",
+                  "src": "175:28:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 88,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increment",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 79,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "140:2:2"
+            },
+            "returnParameters": {
+              "id": 82,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 81,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 88,
+                  "src": "159:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 80,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "159:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "158:6:2"
+            },
+            "scope": 89,
+            "src": "122:88:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 90,
+        "src": "53:159:2"
+      }
+    ],
+    "src": "0:212:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {
+        "D": "0xdB3cdbD36e6a461B4e0c9199D59F8B3E913bEF9B"
+      },
+      "address": "0xbE0c1cBb8Bb7dEC9e34d63614cBF17E9e8e64172",
+      "transactionHash": "0x27f222d3c025ca576a0b38019904ab6463b84a426f6f06a0f621764aa222dce7"
+    }
+  },
+  "schemaVersion": "3.0.13",
+  "updatedAt": "2019-10-01T12:44:03.685Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

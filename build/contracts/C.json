@@ -1,0 +1,377 @@
+{
+  "contractName": "C",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "a",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"a\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Edgar Herrador - <edgar.herrador@slock.it>\",\"methods\":{\"a()\":{\"details\":\"The library C can be seen as implicit base contracts of the contract A that use them.\",\"return\":\"The address of the funtion in the contract A is returned and not the address of the library C.\"}},\"title\":\"A - Implementing the library for an example  for a Library Driven Development approach.\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/edgarherrador/Documents/Projects/custody/brot/contracts/C.sol\":\"C\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/edgarherrador/Documents/Projects/custody/brot/contracts/C.sol\":{\"keccak256\":\"0x9311cf9bb14882dc256f3f648027e2f3c6c40283175df3a8afb997f001782e67\",\"urls\":[\"bzzr://c10b5b1822d722ba1bbcaaa84d492c366f9e2db48062a85b126830c95413acd1\"]}},\"version\":1}",
+  "bytecode": "0x60b4610025600b82828239805160001a60731461001857fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80630dbe671f146038575b600080fd5b603e6080565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60003090509056fea165627a7a72305820e6693a8869f8374e9df6b2f415ef56ce7588ff1117d26aba57eec712622e2a8c0029",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80630dbe671f146038575b600080fd5b603e6080565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60003090509056fea165627a7a72305820e6693a8869f8374e9df6b2f415ef56ce7588ff1117d26aba57eec712622e2a8c0029",
+  "sourceMap": "188:349:3:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "188:349:3:-;;;;;;;;;;;;;;;;;;;;;;;;455:80;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;489:7;523:4;508:20;;455:80;:::o",
+  "source": "pragma solidity >=0.4.25 <0.6.0;\n\n/// @title A - Implementing the library for an example  for a Library Driven Development approach.\n/// @author Edgar Herrador - <edgar.herrador@slock.it>\nlibrary C {\n\n    /*\n     * Public functions\n     */\n\n    /// @dev The library C can be seen as implicit base contracts of the contract A that use them.\n    /// @return The address of the funtion in the contract A is returned and not the address of the library C.\n    function a() public view returns (address) {\n        return address(this);\n    }\n}",
+  "sourcePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/C.sol",
+  "ast": {
+    "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/C.sol",
+    "exportedSymbols": {
+      "C": [
+        102
+      ]
+    },
+    "id": 103,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 91,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "@title A - Implementing the library for an example  for a Library Driven Development approach.\n @author Edgar Herrador - <edgar.herrador@slock.it>",
+        "fullyImplemented": true,
+        "id": 102,
+        "linearizedBaseContracts": [
+          102
+        ],
+        "name": "C",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 100,
+              "nodeType": "Block",
+              "src": "498:37:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 97,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 208,
+                        "src": "523:4:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_C_$102",
+                          "typeString": "library C"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_C_$102",
+                          "typeString": "library C"
+                        }
+                      ],
+                      "id": 96,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "515:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 98,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "515:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 95,
+                  "id": 99,
+                  "nodeType": "Return",
+                  "src": "508:20:3"
+                }
+              ]
+            },
+            "documentation": "@dev The library C can be seen as implicit base contracts of the contract A that use them.\n @return The address of the funtion in the contract A is returned and not the address of the library C.",
+            "id": 101,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "a",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "465:2:3"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 101,
+                  "src": "489:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "489:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:9:3"
+            },
+            "scope": 102,
+            "src": "455:80:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 103,
+        "src": "188:349:3"
+      }
+    ],
+    "src": "0:537:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/edgarherrador/Documents/Projects/custody/brot/contracts/C.sol",
+    "exportedSymbols": {
+      "C": [
+        102
+      ]
+    },
+    "id": 103,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 91,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": "@title A - Implementing the library for an example  for a Library Driven Development approach.\n @author Edgar Herrador - <edgar.herrador@slock.it>",
+        "fullyImplemented": true,
+        "id": 102,
+        "linearizedBaseContracts": [
+          102
+        ],
+        "name": "C",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 100,
+              "nodeType": "Block",
+              "src": "498:37:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 97,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 208,
+                        "src": "523:4:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_C_$102",
+                          "typeString": "library C"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_C_$102",
+                          "typeString": "library C"
+                        }
+                      ],
+                      "id": 96,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "515:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 98,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "515:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 95,
+                  "id": 99,
+                  "nodeType": "Return",
+                  "src": "508:20:3"
+                }
+              ]
+            },
+            "documentation": "@dev The library C can be seen as implicit base contracts of the contract A that use them.\n @return The address of the funtion in the contract A is returned and not the address of the library C.",
+            "id": 101,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "a",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "465:2:3"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 101,
+                  "src": "489:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "489:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:9:3"
+            },
+            "scope": 102,
+            "src": "455:80:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 103,
+        "src": "188:349:3"
+      }
+    ],
+    "src": "0:537:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xc973E931dcbc0E3fdfd061D3a6779B55564a3E57",
+      "transactionHash": "0xded1dcad15c009f30d61f694d114b9bb4c39613b007439f300b676a5c6dfafb9"
+    }
+  },
+  "schemaVersion": "3.0.13",
+  "updatedAt": "2019-10-01T12:44:03.679Z",
+  "devdoc": {
+    "author": "Edgar Herrador - <edgar.herrador@slock.it>",
+    "methods": {
+      "a()": {
+        "details": "The library C can be seen as implicit base contracts of the contract A that use them.",
+        "return": "The address of the funtion in the contract A is returned and not the address of the library C."
+      }
+    },
+    "title": "A - Implementing the library for an example  for a Library Driven Development approach."
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
